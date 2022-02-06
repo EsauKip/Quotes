@@ -15,6 +15,18 @@ export class QuotesComponent implements OnInit {
     new Quote (5,'Charles','Code and people','Programs must be written for people to read, and only incidentally for machines to execute.','Harold Abelson',new Date(2019,7,17)),
     new Quote (6,'Alfred','Tech and life','For a list of all the ways technology has failed to improve the quality of life, please press three.','Alice Kahn',new Date(2019,7,15))
   ];
+  displayInfo(index:number){
+    this.quotes[index].showInfo=!this.quotes[index].showInfo;
+  }
+  deleteAquote(isdeleted:any,index:number){
+    if(isdeleted){
+      let check=confirm("Are you sure you want to delete this quote");
+      if(check){
+this.quotes.splice(index,1);
+      }
+    }
+
+  }
   constructor() { }
 
   ngOnInit(): void {

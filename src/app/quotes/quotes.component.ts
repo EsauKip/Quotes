@@ -27,7 +27,14 @@ this.quotes.splice(index,1);
     }
 
   }
+  newQuote(quote:Quote){
+    let quoteLength=this.quotes.length;
+    quote.id=quoteLength+1;
+    this.quotes.unshift(quote);
+    
+  }
   constructor() { }
+
 
   ngOnInit(): void {
   }

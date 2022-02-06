@@ -1,16 +1,16 @@
 .form-control {
-    color: white;
+    color: black;
     background: transparent;
     font-weight: 570px;
 }
 
 label {
-    color: white;
+    color: black;
     font-weight: 400px;
 }
 
 hr {
-    width: 50%;
+    width: 45%;
     height: 2px;
     background-color: orangered;
 }
@@ -22,7 +22,7 @@ hr {
 }
 
 .container-fluid {
-    background-color: rgba(175, 128, 27, 0.374);
+    background-color: rgba(88, 110, 67, 0.374);
     border-radius: 4px;
     padding-bottom: 5%;
     box-shadow: 2px 2px 3px 2px black;

@@ -10,18 +10,21 @@ import { Quote } from '../quote';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
-  numberOfUpvotes:number=0;
+  
 @Input() quote!:Quote;
 @Output() quoteIsDelete=new EventEmitter<boolean>();
-  numberOfDownvots: any;
+
+
 deleteQuote(deleted:boolean){
   this.quoteIsDelete.emit(deleted);
 }
-upVote(upvote:boolean){
-  this.numberOfUpvotes++;
+likes=0;
+upVote(){
+  this.likes++;
 }
-downVote(downvote:boolean){
-  this.numberOfDownvots++;
+dislikes=0;
+downVote(){
+  this.dislikes++;
 }
   constructor() { }
 

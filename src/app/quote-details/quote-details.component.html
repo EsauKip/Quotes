@@ -2,5 +2,7 @@
 <span id="date">on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span>
 </span>
 <div class="container-fluid" id="buttons">
+    <button class="btn btn-sm btn-success" (click)='upVotes()'>{{quote.like}} <i class="fa fa-thumbs-up" id="like"></i></button>
+    <button class="btn btn-sm hate" id="hate" (click)='downVotes()'>{{quote.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button>
     <a (click)="deleteQuote(true)" class="btn btn-danger" id="delete">Delete</a>
 </div>
